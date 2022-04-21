@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="./styles/style-1600.css" media="screen and (min-width: 1600px)">
+    <link rel="stylesheet" href="./styles/style-1366.css" media="screen and (min-width: 1366px)">
+    <link rel="stylesheet" href="./styles/style-1200.css" media="screen and (min-width: 1200px)">
+    <link rel="stylesheet" href="./styles/style-920.css" media="screen and (min-width: 920px)">
+    <link rel="stylesheet" href="./styles/style-920-max.css" media="screen and (max-width: 920px)">
+    <link rel="stylesheet" href="./styles/style-768.css" media="screen and (min-width: 768px)">
+    <!-- <link rel="stylesheet" href="./styles/style-768-max.css" media="screen and (max-width: 768px)"> -->
+</head>
+
+<body id="body-control">
+    <header>
+        <nav>
+            <div class="icon">
+                <a href="#">
+                    <img src="imgs/icon-menu.svg" id="iconMenu" onclick="handleClickMenu()" width="18"
+                        style="margin-left: 1.5rem;">
+                    <img src="imgs/icon-close.svg" id="iconClose" style="display:none; margin-left: 1.5rem;"
+                        onclick="handleClickClose()" width="20">
+                </a>
+            </div>
+            <div class="large-nav-left">
+                <div class="logo-black"><img src="imgs/logo-black.svg" width="100"></div>
+                <ul>
+                    <li>
+                        <a href="#">Inspiration</a>
+                    </li>
+                    <li>
+                        <a href="#">Find Work</a>
+                    </li>
+                    <li>
+                        <a href="#">Leran Design</a>
+                    </li>
+                    <li>
+                        <a href="#">Go Pro</a>
+                    </li>
+                    <li>
+                        <a href="#">Hire Designers</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="large-nav-right">
+                <a href="#" class="signin">
+                    <p style="
+                    white-space: nowrap;margin-right: 1.5rem;
+                ">Sign in</p>
+                </a>
+                <a class="sign-up-nav form-sub" href="#">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="site-nav-mobile-menu js-site-nav-mobile-menu">
+            <ul class="menu-list" id="menuList">
+                <li class="menu-item">Inspiration</li>
+                <li class="menu-item">Find Work</li>
+                <li class="menu-item">Learn Design</li>
+                <li class="menu-item">Go Pro</li>
+                <li class="menu-item">Marketplace</li>
+                <li class="menu-item">Hire Designers</li>
+            </ul>
+        </div>
+
+        <div id="wrap">
+            <div style="background: #f9f8fd">
+                <div class="container-large signed-out-masthead">
+                    <div class="text-content">
+                        <h1>Discover the world’s top designers &amp; creatives</h1>
+                        <p>Dribbble is the leading destination to find &amp; showcase creative work and home to the
+                            world's best design professionals.</p>
+                        <a class="form-sub sign-up" href="#">Sign up</a>
+                    </div>
+                    <div class="shot-content">
+                        <img src="/imgs/banner.webp" alt="">
+                        <!-- <picture>
+                            <source type="image/webp" sizes="(max-width: 500px) 320px, (max-width: 1200px) 400px, 510px"
+                                srcset="https://cdn.dribbble.com/assets/art-banners/mergedevt-300w-55a30a7f7c960d97a760dc8d0eac6b39737ac33c7fe4f1f480b2d3b9d1e8da67.webp 320w, https://cdn.dribbble.com/assets/art-banners/mergedevt-452w-72b659bb235fa3fc71840f8adaa28d95aa2b059d386b456f66001799950d6324.webp 400w, https://cdn.dribbble.com/assets/art-banners/mergedevt-600w-0e558f3345b9715c5cd0a4b3dcee477ca69c2d450d1a9de0992d0c9465e75f20.webp 640w, https://cdn.dribbble.com/assets/art-banners/mergedevt-900w-7548d75bc4c3ac889b48a264c6d460d9ecdd96411c784f12e1d8296185c95e9e.webp 800w, https://cdn.dribbble.com/assets/art-banners/mergedevt-1200w-5db5612470ef1ab190922aa6f466c7dcd8d417614c98968185d5731ca0074af9.webp 1100w">
+                            <source type="image/png" sizes="(max-width: 500px) 320px, (max-width: 1200px) 400px, 510px"
+                                srcset="https://cdn.dribbble.com/assets/art-banners/mergedevt-300w-9b817d251dafce559cb0a020f3d07915ced6f5343f8d1696296bbb7c5446c6fe.png 320w, https://cdn.dribbble.com/assets/art-banners/mergedevt-452w-22eb852bf4cf3da6aab7cd0107e37e52548c0976285634ef75feb39af2c72cff.png 400w, https://cdn.dribbble.com/assets/art-banners/mergedevt-600w-57271ebfdf4f44412491e6ac02d1dfdc2b2631f553e4c462db4776c94ca2ce0b.png 640w, https://cdn.dribbble.com/assets/art-banners/mergedevt-900w-04e09f61af57f982ebbf7bc5fdb03923bb79515b7b73e31097310a75c8f2a830.png 800w, https://cdn.dribbble.com/assets/art-banners/mergedevt-1200w-16f32942a39bacb4fafc1a0c3249f0f2383884f9584a1d83e751252f4aa32a16.png 1100w">
+                            <img width="335" height="300"
+                                alt="Dribbble is the leading destination to find &amp; showcase creative work and home to the world's best design professionals."
+                                class="signed-out-masthead-image "
+                                src="https://cdn.dribbble.com/assets/art-banners/mergedevt-600w-57271ebfdf4f44412491e6ac02d1dfdc2b2631f553e4c462db4776c94ca2ce0b.png">
+                        </picture> -->
+                    </div>
+                </div>
+            </div>
+            <div id="wrap-inner" class="flushed">
+                <div id="content" role="main">
+                    <div id="main" class="main-full">
+                        <ol id="contentList"
+                            class="js-thumbnail-grid shots-grid group dribbbles container-fluid is-scrolled">
+
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-01.jpg">
+                                    </figure>
+                                    <!-- <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a> -->
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-02.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-03.jpg">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-04.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-05.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+
+                                        <img width="330" height="247" src="./imgs/cover-06.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+
+                                        <img width="330" height="247" src="./imgs/cover-07.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+
+                                        <img width="330" height="247" src="./imgs/cover-08.jpg">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-09.png">
+
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-10.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-11.jpg">
+
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="screenshot-17995726" data-thumbnail-id="17995726"
+                                class="shot-thumbnail js-thumbnail shot-thumbnail-container      " data-ad-data=""
+                                data-boost-id="" data-is-boost-fallback="">
+                                <div
+                                    class="js-thumbnail-base shot-thumbnail-base disabled-shot-section dribbble-shot dribbble">
+                                    <figure style="background-color: #000000"
+                                        class="js-thumbnail-placeholder shot-thumbnail-placeholder">
+                                        <img width="330" height="247" src="./imgs/cover-12.png">
+                                    </figure>
+                                    <a class="shot-thumbnail-link dribbble-link js-shot-link" href="#">
+                                        <span class="accessibility-text">View G</span>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="shot-details-container js-shot-details-container"
+                                    style="visibility: visible;">
+                                    <div class="user-information">
+                                        <a class="hoverable url" rel="contact" href="#">
+                                            <img class="photo lazyloaded" alt="George Bokhua" width="24" height="24"
+                                                data-src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676"
+                                                src="https://cdn.dribbble.com/users/24078/avatars/mini/b995a47ef10412a6054d3133b0f009a8.jpg?1481552676">
+                                            <span class="display-name">George Bokhua</span>
+                                        </a> <a class="badge-link" href="#">
+                                            <span class="badge badge-pro">Pro</span>
+                                        </a>
+                                    </div>
+                                    <div class="shot-statistics-container js-shot-statistics">
+                                        <div class="shot-statistic js-shot-likes-container">
+                                            <div class="like-action-17995726  compact-true shot-action">
+                                                <a class=" tipsy-mobile-disabled stats-action like-shot" rel="no-follow"
+                                                    title="Like this shot" data-signup-trigger=""
+                                                    data-href="/signup/new" data-context="like-shot" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24" role="img"
+                                                        class="icon fill-current shot-tools-icon">
+                                                        <path
+                                                            d="m18.199 2.04c-2.606-.284-4.262.961-6.199 3.008-2.045-2.047-3.593-3.292-6.199-3.008-3.544.388-6.321 4.43-5.718 7.96.966 5.659 5.944 9 11.917 12 5.973-3 10.951-6.341 11.917-12 .603-3.53-2.174-7.572-5.718-7.96z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="accessibility-text">Like</span>
+                                                </a> </div>
+                                            <span
+                                                class="js-shot-likes-count color-deep-blue-sea-light-20 font-weight-500">113</span>
+                                        </div>
+                                        <div class="shot-statistic js-shot-views-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                viewBox="0 0 14 11" fill="none" role="img"
+                                                class="icon fill-current shot-tools-icon">
+                                                <path
+                                                    d="M7 3.45833C5.87242 3.45833 4.95833 4.37242 4.95833 5.5C4.95833 6.62758 5.87242 7.54167 7 7.54167C8.12758 7.54167 9.04167 6.62758 9.04167 5.5C9.04167 4.37242 8.12758 3.45833 7 3.45833ZM7 0.25C3.13425 0.25 0 4.625 0 5.5C0 6.375 3.13425 10.75 7 10.75C10.8657 10.75 14 6.375 14 5.5C14 4.625 10.8657 0.25 7 0.25ZM7 8.70833C5.22783 8.70833 3.79167 7.27217 3.79167 5.5C3.79167 3.72783 5.22783 2.29167 7 2.29167C8.77217 2.29167 10.2083 3.72783 10.2083 5.5C10.2083 7.27217 8.77217 8.70833 7 8.70833Z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                class="js-shot-views-count color-deep-blue-sea-light-20 font-weight-500">18.2k</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer><img src="imgs/logo-red.svg" width="100">
+        <div class="tagline">
+            Dribbble is the world’s leading community for creatives to share, grow, and get hired.
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

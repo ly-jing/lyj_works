@@ -1,0 +1,20 @@
+.icon {
+  display: none;
+}
+.large-nav-left ul {
+  /* display: none; */
+}
+.large-nav-left {
+  display: flex;
+  align-items: center;
+}
+.large-nav-left ul {
+  display: flex;
+  list-style: none;
+}
+.sign-up-nav {
+  display: block;
+}
+.large-nav-right {
+  margin-right: 1.3125rem;
+}

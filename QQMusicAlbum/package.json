@@ -1,0 +1,16 @@
+{
+  "name": "work_1",
+  "version": "1.0.0",
+  "description": "- 因为需要将 `area`、`album` 数据和DOM节点关联，所以创建两个类 `Area`、`Album`，各自 `implements` 于 `IArea`、`IAlbum`，关联各自DOM对象\r - 将网络请求方法拆分到独立模块\r - 遍历 `areas` 生成标签的 `DOM` 结构，关联 `area` 对象和对应的 `DOM` 对象，并且绑定 `click` 事件，用于处理点击时切换列表内容的逻辑\r - 根据当前选中的标签（默认选中第一项）过滤 `albums` 中对应该分类的专辑数据，遍历生成下面的列表结构，关联 `album` 对象和对应的 `DOM` 对象，同时给每一项的删除按钮绑定 `click` 事件，用于处理点击时删除该列表项\r   - 删除列表项需要删除DOM节点：`removeChild`\r - 动态创建 `DOM` 的逻辑实现之后，删除之前html页面中需要被动态填充的部分",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0"
+  }
+}

@@ -1,4 +1,4 @@
-## 作业思路
+## 思路
 
 - 因为需要将 `area`、`album` 数据和DOM节点关联，所以创建两个类 `Area`、`Album`，各自 `implements` 于 `IArea`、`IAlbum`，关联各自DOM对象
 - 将网络请求方法拆分到独立模块

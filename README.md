@@ -1,11 +1,3 @@
-### `QQ`音乐首页
-
-- `HTML` / `CSS`  / `JavaScript`
-
-> 简化版的`QQ`音乐首页
->
-> - 通过`JavaScript`脚本读取 `task.json` 中的数据，自动完成`html`页面内容的填充
-
 ### `Dribbble` 首页
 
 - `HTML` / `CSS`  / `JavaScript`

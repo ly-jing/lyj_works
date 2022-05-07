@@ -1,3 +1,41 @@
+### `QQ`音乐新碟页面
+
+- React
+
+> - 将整体页面拆分设计成4个组件
+>
+>   ![imgs](https://raw.githubusercontent.com/ly-jing/lyj_works/main/QQMusicAlbum/imgs/structure.jpg)
+>
+>   ------
+>
+>   1. Header
+>
+>      页面的头部，包含QQ音乐logo
+>
+>   2. Areas
+>
+>      导航栏地区部分，3个接口
+>
+>      - areas: IArea[];
+>
+>      - currentArea: number;
+>
+>      - switchTab
+>
+>   3. AlbumList
+>
+>      专辑列表整体，2个接口
+>
+>      - currentAlbums: IAlbum[];
+>      - deleteAlbum: (album: IAlbum) => void;
+>
+>   4. Album
+>
+>      每一项专辑，2个接口
+>
+>      - currentAlbums: IAlbum[];
+>      - deleteAlbum: (album: IAlbum) => void;
+
 ### `Dribbble` 首页
 
 - `HTML` / `CSS`  / `JavaScript`
@@ -22,4 +60,3 @@
 > - 使用动态创建 `DOM` 的方式来实现页面
 > - 使用泛型方法请求 `json` 数据
 > - 异步请求使用 `async/await`
-
